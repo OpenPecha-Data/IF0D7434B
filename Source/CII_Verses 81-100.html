@@ -1,0 +1,539 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Bibliotheca Polyglotta</title>
+<link rel='stylesheet' type='text/css' href='css/bp.css'>
+<link rel='stylesheet' type='text/css' href='css/diac_doc.css'>
+
+<link rel='stylesheet' type='text/css' href='css/imageGallery.css'>
+<link rel='stylesheet' type='text/css' href='css/ss.css'>
+	      <link rel='stylesheet' type='text/css' href='css/tree_menu.css'>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
+<!--  <script type="text/javascript" src="js/jqModal.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/tree_menu.js"></script>
+<!-- <script src="js/analytics_tracking.js" type="text/javascript"></script> -->
+
+
+<!-- <script type="text/javascript" src="js/popupDivhandling.js"></script> -->
+<!--  <script type="text/javascript" src="jquery-latest.js"></script>
+<script type="text/javascript" src="js/jquery-imagegallery.js"></script>-->
+</head>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//vrtx.uio.no/js/analytics/v2/analytics.js','ga');
+
+ga('create', 'UA-86407471-1', 'auto');
+ga(function(tracker) {
+
+	// Modifies sendHitTask to hit ipproxy instead of http://www.google-analytics.com directly
+	tracker.set('sendHitTask', function(model) {
+		payload = model.get('hitPayload');
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', '//w3prod-ipproxy.uio.no/collect' +'?' + payload, true);
+		xhr.send();
+	});
+		ga('send', 'pageview');
+});
+</script>
+<body><div class='banner'></div><!-- banner --><div class='uiologo'>
+<a href='http://www.hf.uio.no/'><img src='https://www2.hf.uio.no/polyglotta/hfe.png' border='0'></a></div><!-- uiologo --><div class='clear'></div>
+<div class='smule_tittel'>
+<div class='brodsmuleboks'>You are here: <a href='/polyglotta/index.php' accesskey='1'> BP HOME</a> >  <a href='/polyglotta/index.php?page=library&amp;bid=2' accesskey='1'>TLB</a> > <a href='/polyglotta/index.php
+	?page=volume&amp;vid=1123' accesskey='1'>Nāgārjuna: Ratnāvalī</a> > fulltext</div><div class='clear'></div>
+<div class='headline'>Nāgārjuna: Ratnāvalī<div class='clear'></div></div><!-- headline -->
+</div><!-- smule_tittel -->
+<!--<div>-->
+
+<h2 class="trigger" id="tr_lang"><a  href="#">Choose languages</a></h2>
+<h2 class="trigger" id="tr_img"><a  href="#">Choose images, etc.</a></h2>
+
+
+<div id="toggle_container_lan">
+
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_lan.php" method="POST">
+
+<div style="float:left; width:auto; text-align:left; margin-left:20px;">
+<h5>Choose languages</h5>
+<ul>
+<input value="Choose all" type="button" onClick="markAll('tr')"><input value="Uncheck all" type="button" onClick="markNone('tr')">
+
+	<li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1123[5661]" value="5661" id="lancheckbox" checked >Sanskrit: Hahn (1982)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1123[5663]" value="5663" id="lancheckbox" checked >Chinese: Chi: 真諦, T.1656</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1123[5662]" value="5662" id="lancheckbox" checked >Tibetan: Tib: Jñānagarbha and Klu’i rgyal mtshan, Tg ge, Hahn (1982)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1123[5664]" value="5664" id="lancheckbox" checked >English: Eng: Tucci (1934/36), Eng: Hopkings and Lati (1975)</label></li><li class="tip" title="Checkbox :: Enable text"><label class="f1_checkbox"><input type="checkbox" name="spraak_valg_ct_1123[5665]" value="5665" id="lancheckbox" checked >Tibetan: Tib ṭ: Ajitamitra (9th-10th Century A.D.), Tg ge</label></li><div style="clear:both"></div>
+<input type='submit' name='set_cookie' value='Save view'>
+<div style="clear:both"></div>
+
+</ul>
+<input type="hidden" name="vid" value="1123">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+</div>
+
+<div id="toggle_container_img">
+<form  id="tr"  name="Sprakvalg2" action="inc/set_cookie_img.php" method="POST">
+
+<div style="float:left; width:auto; text-align: left;">
+<h5>Choose display</h5>
+<ul>
+		
+	<li> 
+		<input type='checkbox' name='bilder' checked="checked" > Enable images
+	</li>
+	<li> 
+	<input type='checkbox' onclick="onOffCheckbox();" name='fotnoter' checked="checked"> Enable footnotes
+	<div id="pff" style="display:block" >
+	<ul>
+	<li><input type='radio' name='fotnote_valg'  value='show_a' checked> Show all footnotes</li>
+	<li><input type='radio' name='fotnote_valg'  value='show_h'  > Minimize footnotes</li>
+	</ul>
+	</li>
+	
+	</div>
+	<div style="float:left; width:20em; text-align: left; margin-left:120px ">
+	<div style="clear:both"></div>
+	<input type='submit' name='set_cookie' value='Save view'>
+	<div style="clear:both"></div>
+	</div>
+	
+</ul>
+<input type="hidden" name="vid" value="1123">
+<input type="hidden" name="page" value="fulltext">
+</form>
+</div>
+	
+
+
+
+</div>
+</div>
+
+<div class='sok'><form name='Sok' id='FormBlock' action='/polyglotta/index.php' method='get'>
+<input type='hidden' name='page' value='search'>
+<input type='hidden' name='bid' value='2'>
+<input type='hidden' name='vid' value='1123'>
+<div class='sokeboks'>
+<input name='sokefelt' id='sokeboks' type='text' size='30' value=''>
+<input type='submit' name='Sok' value='Search' id='nsubmit'>
+<div class='clear'></div><a class="diacbutton" id="diacbutton" href="#">Diacritica</a><a id="diac2button" class="diac2button"  href="#">Diacritica-help</a><a class="s2button" href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation:SearchHelp">Search-help</a><div class='diacritical' id='diacritical_sign'><div style="text-align: left; ">
+<table class = 'diacritica' width="200" border="1" cellpadding="1" cellspacing="1" id="diacritical">
+    <tbody>
+        <tr>
+            <td style="text-align: center; ">ā</td>
+            <td style="text-align: center; ">ī</td>
+            <td style="text-align: center; ">ū</td>
+            <td style="text-align: center; ">ṛ</td>
+            <td style="text-align: center; ">ṝ</td>
+            <td style="text-align: center; ">ḷ</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ḹ</td>
+            <td style="text-align: center; ">&rsquo;</td>
+            <td style="text-align: center; ">ṃ</td>
+            <td style="text-align: center; ">ḥ</td>
+            <td style="text-align: center; ">ṅ</td>
+            <td style="text-align: center; ">&ntilde;</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">ṭ</td>
+            <td style="text-align: center; ">ḍ</td>
+            <td style="text-align: center; ">ṇ</td>
+            <td style="text-align: center; ">ṣ</td>
+            <td style="text-align: center; ">ś</td>
+            <td style="text-align: center; ">ź</td>
+        </tr>
+        <tr>
+            <td style="text-align: center; ">&scaron;</td>
+            <td style="text-align: center; ">č</td>
+            <td style="text-align: center; ">ǰ</td>
+            <td style="text-align: center; ">&gamma;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+            <td style="text-align: center; ">&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+</div></div><!-- diacritical --><div id="ex3a" class="jqmDialog"><div>
+	<span style="font-size:12px;">Note on the transliteration:</span></div>
+<div>
+	<span style="font-size:12px;">The transliteration system of the BP/TLB is based on the Unicode/UTF-8 system. However, there may be difficulties with some of the letters &ndash; particularly on PC/Windows-based systems, but not so much on the Mac. We have chosen the most accepted older and traditional systems of transliteration against, e.g, Wylie for Tibetan, since with Unicode it is possible, in Sanskrit and Tibetan, etc., to represent one sound with one letter in almost all the cases (excepting Sanskrit and Tibetan aspirated letters, and Tibetan tsa, tsha, dza). We thus do not use the Wylie system which widely employs two letters for one sound (ng, ny, sh, zh etc.).</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">Important:</span></div>
+<div>
+	<span style="font-size:12px;">We ask you in particular to note the use of the &rsquo; apostrophe and not the &#39; representing the avagrāha in Sanskrit, and most important the &rsquo;a-chuṅ in Tibetan. On the Mac the &rsquo; is Alt-M.</span></div>
+<div>
+	&nbsp;</div>
+<div>
+	<span style="font-size:12px;">If you cannot find the letters on your key-board, you may click on the link &quot;Diacritica&quot; to access it for your search.</span></div>
+</div><!-- diacritical_doc --><div class='clear'></div><select name='searchmode'><option selected value='phrase'>Search for exact phrase</option>
+<option  value='phraseregex'>Search for exact phrase (regex)</option>
+<option  value='word'>Search for every word in one record</option>
+<option  value='free'>Search for every word fragment in one record</option>
+</select>
+<select name='context'>
+<option ($_GET[context]=="a" ? "selected" : "") value="a"> Search in all libraries</option><option selected value="bTLB">Search in TLB</option><option selected value="v1123">Search in Nāgārjuna: Ratnāvalī</option></select><div class='clear'></div><a class='sbutton' href='/polyglotta/index.php?page=asearch&amp;bid=2&amp;vid=1123'>Choose specific texts..</a><div class='clear'></div></div></form></div><!-- sok --><div class='clear'></div><!-- clear --><div id='dcr' class='divControlRead'><div class='venstrefulltekstfelt'><div class='bverknavn'><a href='/polyglotta/index.php?page=volume&amp;vid=1123'>Nāgārjuna: Ratnāvalī</a></div><table class="tlvl2">
+					<tr>
+						<td bgcolor="#ffffff"> &nbsp; &nbsp;
+						<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_7627.Verses41-58" border=0 hspace=2>
+						<a href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1123" class="ajax_tree0">Complete text</a>
+						</td>
+					</tr>
+				  </table><input type="hidden" name="tree_top_options" id="tree_top_options" value="134609.Title|134610.Preface|134611.Chapter1|134617.Chapter2|134623.Chapter3|134629.Chapter4|134635.Chapter5|134641.Colophon|">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134609.Title" border=0 hspace=2><a id="href_134609.Title" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942450&level=1&cid=843397" class="ajax_tree0">Title
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134610.Preface" border=0 hspace=2><a id="href_134610.Preface" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942451&level=1&cid=843398" class="ajax_tree0">Preface
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134611.Chapter1','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134611.Chapter1" border=0 hspace=2><a id="href_134611.Chapter1" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942452&level=1&cid=843399" class="ajax_tree0">Chapter 1
+</td></tr></table>
+<div style="display:none;"  id="div_134611.Chapter1">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134612.Verses1-20" border=0 hspace=2><a id="href_134612.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942452&level=2&cid=843399" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134613.Verses21-40" border=0 hspace=2><a id="href_134613.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942472&level=2&cid=843419" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134614.Verses41-60" border=0 hspace=2><a id="href_134614.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942492&level=2&cid=843439" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134615.Verses61-80" border=0 hspace=2><a id="href_134615.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942512&level=2&cid=843459" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134616.Verses81-100" border=0 hspace=2><a id="href_134616.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942532&level=2&cid=843479" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134617.Chapter2','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134617.Chapter2" border=0 hspace=2><a id="href_134617.Chapter2" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942553&level=1&cid=843500" class="ajax_tree0">Chapter 2
+</td></tr></table>
+<div style="display:none;"  id="div_134617.Chapter2">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134618.Verses1-20" border=0 hspace=2><a id="href_134618.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942553&level=2&cid=843500" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134619.Verses21-40" border=0 hspace=2><a id="href_134619.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942573&level=2&cid=843520" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134620.Verses41-60" border=0 hspace=2><a id="href_134620.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942593&level=2&cid=843540" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134621.Verses61-80" border=0 hspace=2><a id="href_134621.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942613&level=2&cid=843560" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134622.Verses81-100" border=0 hspace=2><a id="href_134622.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942633&level=2&cid=843580" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134623.Chapter3','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134623.Chapter3" border=0 hspace=2><a id="href_134623.Chapter3" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942654&level=1&cid=843601" class="ajax_tree0">Chapter 3
+</td></tr></table>
+<div style="display:none;"  id="div_134623.Chapter3">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134624.Verses1-20" border=0 hspace=2><a id="href_134624.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942654&level=2&cid=843601" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134625.Verses21-40" border=0 hspace=2><a id="href_134625.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942674&level=2&cid=843621" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134626.Verses41-60" border=0 hspace=2><a id="href_134626.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942694&level=2&cid=843641" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134627.Verses61-80" border=0 hspace=2><a id="href_134627.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942714&level=2&cid=843661" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134628.Verses81-100" border=0 hspace=2><a id="href_134628.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942734&level=2&cid=843681" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134629.Chapter4','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134629.Chapter4" border=0 hspace=2><a id="href_134629.Chapter4" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942755&level=1&cid=843702" class="ajax_tree0">Chapter 4
+</td></tr></table>
+<div style="display:none;"  id="div_134629.Chapter4">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134630.Verses1-20" border=0 hspace=2><a id="href_134630.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942755&level=2&cid=843702" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134631.Verses21-40" border=0 hspace=2><a id="href_134631.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942775&level=2&cid=843722" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134632.Verses41-60" border=0 hspace=2><a id="href_134632.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942795&level=2&cid=843742" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134633.Verses61-80" border=0 hspace=2><a id="href_134633.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942815&level=2&cid=843762" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134634.Verses81-100" border=0 hspace=2><a id="href_134634.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942835&level=2&cid=843782" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<a href="javascript:;" onclick="Expand('134635.Chapter5','0','1')"><img src="./application/class/images/collapsed.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="img_134635.Chapter5" border=0 hspace=2><a id="href_134635.Chapter5" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942856&level=1&cid=843803" class="ajax_tree0">Chapter 5
+</td></tr></table>
+<div style="display:none;"  id="div_134635.Chapter5">
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134636.Verses1-20" border=0 hspace=2><a id="href_134636.Verses1-20" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942856&level=2&cid=843803" class="ajax_tree1">Verses 1-20
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134637.Verses21-40" border=0 hspace=2><a id="href_134637.Verses21-40" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942876&level=2&cid=843823" class="ajax_tree1">Verses 21-40
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134638.Verses41-60" border=0 hspace=2><a id="href_134638.Verses41-60" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942896&level=2&cid=843843" class="ajax_tree1">Verses 41-60
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134639.Verses61-80" border=0 hspace=2><a id="href_134639.Verses61-80" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942916&level=2&cid=843863" class="ajax_tree1">Verses 61-80
+</td></tr></table>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+ &nbsp;  &nbsp; <img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134640.Verses81-100" border=0 hspace=2><a id="href_134640.Verses81-100" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942936&level=2&cid=843883" class="ajax_tree1">Verses 81-100
+</td></tr></table>
+</div>
+<table class="tlvl2"><tr><td bgcolor="#ffffff">
+<img src="./application/class/images/expanded.gif" alt="Click to Expand/Collapse Option" title="Click to Expand/Collapse Option" id="expand_134641.Colophon" border=0 hspace=2><a id="href_134641.Colophon" href="/polyglotta/index.php?page=fulltext&view=fulltext&vid=1123&mid=1942957&level=1&cid=843904" class="ajax_tree0">Colophon
+</td></tr></table>
+<script language=javascript>test('134622.Verses81-100|134617.Chapter2|')</script><div class='bverknavn'><a href='/polyglotta/index.php?page=library&amp;bid=2'>Back to library</a></div></div><!-- venstrefulltekstfelt --><div class="clear"></div><!-- clear --><div id="nav-menu"><ul>
+  		  <li  id="nav-1"><a class="tabValgt" href="/polyglotta/index.php?page=record&amp;view=record&amp;vid=1123&amp;mid=1942633&amp;level=2">Sentence by sentence view</a></li>
+  		  <li  id="nav-2"><a  href="/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=1123&amp;cid=843580&amp;mid=1942633&amp;level=2">Continuous text view</a></li>
+ 		<li  id="nav-3"><a  href="/polyglotta/admin/index.php?page=fulltext&amp;view=fulltext&amp;vid=1123&amp;cid=843580&amp;mid=1942633&amp;level=2">View in admin</a></li>
+
+  		  </ul></div><div class='clear'></div><!-- clear -->			<script language="javascript" type="text/javascript">
+			var kilderef = '';
+			var tekstid = 0;
+			var tekstid_bilder = 0;
+			var filsti = '';
+			var thumbnail = '';
+			</script>
+		<div class='infofulltekstfelt'><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><div class='kilderef' id='7856644'></div><div class='clear'></div><span id='7856644bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><div class='kilderef' id='7857660'></div><div class='clear'></div><span id='7857660bi' class='verse'>
+							腳趺高可愛 旋毛端向上<br />由長不棄背 本所受持法&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><div class='kilderef' id='7857152'></div><div class='clear'></div><span id='7857152bi' class='verse'>
+							yaṅ dag blaṅs pa’i chos rnams ni | | spel bas dpal ldan mdog bzaṅ źiṅ | |<br />źabs kyi loṅ bu mi mṅon daṅ | | ba spu gyen du phyogs mtshan ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><div class='kilderef' id='7858168'></div><div class='clear'></div><span id='7858168bi' class='verse'>
+							Through promoting the vowed practices your good colour will be glorious, <br />Your ankles will not be prominent, your body hairs will grow upwards.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><div class='kilderef' id='7858676'></div><div class='clear'></div><span id='7858676bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856645bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857661bi' class='verse'>
+							由恭敬施受 明處及工巧<br />故得鹿王膞 及聰明大智&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857153bi' class='verse'>
+							rig daṅ bzo la sogs pa’i gnas | | gus pas len daṅ sbyin pas khyod | |<br />ae na ya yi byin pa daṅ | | yid rno śes rab chen por ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858169bi' class='verse'>
+							Through your zeal for knowledge and the arts and so forth, and through imparting them<br />You will have the calves of an antelope, a sharp mind and great wisdom.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858677bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856646bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857662bi' class='verse'>
+							他求自有物 我疾能惠施<br />由此臂傭大 得為世化主&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857154bi' class='verse'>
+							raṅ gi nor bdog blaṅs gyur na | | myur du btaṅ ba’i brtul źugs kyis | |<br />phyag rgya bde daṅ ’jig rten gyi | | rnam par ’dren pa ñid du ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858170bi' class='verse'>
+							If others seek your wealth and possessions, through the discipline of immediate giving<br />You will have broad hands, a pleasant complexion and will become a leader of the world.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858678bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856647bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857663bi' class='verse'>
+							親愛若別離 菩薩令和集<br />此感陰藏相 恒服慚羞衣&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857155bi' class='verse'>
+							gñen bśes phan tshun bye ba dag | | yaṅ dag bsdum par byas pa yis | |<br />dpal ldan mdoms kyis pa ba ni | | spubs su nub pa’i dam par ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858171bi' class='verse'>
+							Through reconciling well friends who have been divided<br />Your glorious secret organ will retract inside.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858679bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856648bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857664bi' class='verse'>
+							常施樓殿具 細軟可愛色<br />故感天色身 潤滑光微妙&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857156bi' class='verse'>
+							khaṅ bzaṅs gdiṅ ba rgyan dag ni | | bde źiṅ bzaṅ ba rab byin pas | |<br />gser ni btso ma dri med pa | | śin tu ’jam pa’i mdog ’drar ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858172bi' class='verse'>
+							Through giving good houses and nice comfortable carpets<br />Your colour will be very soft like pure stainless gold.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858680bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856649bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857665bi' class='verse'>
+							由施無上護 如理順尊長<br />感一孔一毛 白毫端嚴面&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857157bi' class='verse'>
+							bla na med pa’i dbaṅ byin źiṅ | | rigs par bla ma’i rjes ’jug pa | |<br />dpal ldan pa spu ñag re daṅ | | źal ni mdzod spus brgyan par ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858173bi' class='verse'>
+							Through giving the highest powers [or kingdoms] and following a teacher properly<br />You will be adorned by each and every hair and by a circle of hair between the eyebrows.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858681bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856650bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857666bi' class='verse'>
+							常說善愛語 又能順正教<br />上身如師子 頸圓喻甘浮&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857158bi' class='verse'>
+							sñan ciṅ dga’ bar smras pa daṅ | | legs par smras daṅ mthun byas pas | |<br />khyod ni dpuṅ mgo zlum pa daṅ | | ro stod seṅ ge’i ’dra bar ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858174bi' class='verse'>
+							Through speech that is pleasant and pleasing and by acting upon the good speech [of others] <br />You will have curving shoulders and a lion-like upper body.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858682bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856651bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857667bi' class='verse'>
+							看病給醫藥 或令他養護<br />故得腋下滿 千脈別百味&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857159bi' class='verse'>
+							nad pa rnams la rim gro daṅ | | gsos pas thal goṅ rgyas pa daṅ | |<br />bdag ñid rnal du gnas pa daṅ | | ro bro ba yi mchog tu ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858175bi' class='verse'>
+							If you nurse and cure the sick, Your chest will be broad, <br />You will live naturally and all tastes will be the best.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858683bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856652bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857668bi' class='verse'>
+							於自他法事 常能為端首<br />頂骨鬱尼沙 橫豎頰匿瞿&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857160bi' class='verse'>
+							chos daṅ mthun pa’i bya ba la | | thog draṅs khyod kyi dbu gtsug tor | |<br />legs gnas nya gro dha lta bur | | chu źeṅ gab pa dag tu ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858176bi' class='verse'>
+							Through initiating activities concordant with the practices, the swelling on your crown<br />will stand out well and [your body] will be symmetrical like a banyan tree.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858684bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856653bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857669bi' class='verse'>
+							由長時巧說 實美滑善言<br />得八相梵音 及舌根脩廣&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857161bi' class='verse'>
+							tshig ni bden pa ’jam po dag | | yun riṅs dus su brjod pa yis | |<br />mi yi dbaṅ po ljags yaṅs śiṅ | | tshaṅs pa yi ni dbyaṅs ldan ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858177bi' class='verse'>
+							Through speaking true and soft words over the years, O lord of men, <br />Your tongue will be lond and your voice that of Brahmā.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858685bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856654bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857670bi' class='verse'>
+							已知事實利 數數為他說<br />得好如師子 面門方可愛&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857162bi' class='verse'>
+							rtag tu rgyun mi ’chad pa ru | | bden pa’i tshig ni brjod pa yis | |<br />’gram pa seṅ ge’i lta bu daṅ | | dpal ldan thub pa dga’ bar ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858178bi' class='verse'>
+							Through speaking true words always at all times<br />You will have cheeks like a lion, be glorious and hard to best.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858686bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856655bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857671bi' class='verse'>
+							由尊他不輕 隨順行正理<br />齒白齊必勝 譬若真珠行&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857163bi' class='verse'>
+							lhag par gus daṅ bkur sti daṅ | | ji ltar rigs par rjes ’jug pas | |<br />tshems ni śin tu dkar ba daṅ | | mdog ldan mñam pa’i tshems su ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858179bi' class='verse'>
+							Through showing great respect, serving others and doing what should be done, <br />Your teeth will shine very white and even.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858687bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856656bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857672bi' class='verse'>
+							由數習此言 謂實不兩舌<br />故具四十齒 平滑堅遒淨&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857164bi' class='verse'>
+							dbyen daṅ phra ma med pa yi | | tshig ni yun riṅs goms pa yis | |<br />dpal ldan tshems ni bźi bcu tham | | mñam par thags kyaṅ bzaṅ bar ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858180bi' class='verse'>
+							Through using true and non-divisive speech over a long time<br />You will have forty glorious teeth set evenly and good.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858688bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856657bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857673bi' class='verse'>
+							由瞻視眾生 滑無貪瞋癡<br />眼珠青滑了 瞼睫如牛王&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857165bi' class='verse'>
+							chags daṅ sdaṅ daṅ rmoṅs med ciṅ | | byams pas sems can bltas pa yis | |<br />spyan ni bkrag can mthon mthiṅ la | | rdzi ma pa yi lta bur ’gyur | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858181bi' class='verse'>
+							Through viewing things with love and without desire, hatred or delusion<br />Your eyes will be bright and blue with eyelashes like a bull.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858689bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856658bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857674bi' class='verse'>
+							由如此略說 大人相及因<br />轉輪王菩薩 美飾汝應知&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857166bi' class='verse'>
+							de ltar mṅon na rgyur byas pa’i | | sum cu rtsa gñis de dag ni | |<br />skyes bu seṅ ge chen po yi | | mtshan rnams legs par mkhyen par mdzod | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858182bi' class='verse'>
+							Thus in brief know well these two and thirty signs<br />Of a great lion of a being together with their causes.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858690bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856659bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857675bi' class='verse'>
+							隨相有八十 從慈悲流生<br />大王我不說 為避多文辭&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857167bi' class='verse'>
+							dpe byad bzaṅ po brgyad cu ni | | byams pa’i rgyu mthun las byuṅ ba | |<br />gźuṅ ni maṅs su dogs pa yis | | rgyal po khyod la ma bśad do | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858183bi' class='verse'>
+							The eighty minor marks arise from concordant cause of love; <br />Fearing this text would be too long, I will not, O King, explain them.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858691bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856660bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857676bi' class='verse'>
+							雖諸轉輪王 同有此相好<br />淨明及可愛 終不逮如來&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857168bi' class='verse'>
+							’khor los sgyur ba thams cad la | | ’di dag yod par ’dod mod kyi | |<br />dag daṅ mdzes daṅ gsal ba ni | | saṅs rgyas rnams kyi char mi phod | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858184bi' class='verse'>
+							All Universal Emperors are regarded as having these, <br />But their purity, their lustre and beauty cannot begin to match those of a Buddha.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858692bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856661bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857677bi' class='verse'>
+							從菩薩善心 一念中一分<br />輪王相好因 尚不能等此&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857169bi' class='verse'>
+							’khor los sgyur ba’i mtshan daṅ ni | | dpe byad bzaṅ po gaṅ dag gcig | |<br />thub dbaṅ po la sems daṅ ba’i | | yan lag gcig las ’byuṅ bśad pa’i | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858185bi' class='verse'>
+							The good major and minor marks of a Universal Emperor<br />Are said to arise from a single act of faith in the King of Subduers.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858693bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856662bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857678bi' class='verse'>
+							一人萬億劫 修善根生長<br />於佛一毛相 此因亦不感&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857170bi' class='verse'>
+							bskal pa bye ba brgya phrag ni | | gcig tu bsags pa’i dge pas kyaṅ | |<br />saṅs rgyas ba spu ñag gcig kyaṅ | | bskyed par nus pa ma yin no | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858186bi' class='verse'>
+							But such virtue accumulated with a mind one-pointed for a hundred times ten million aeons<br />Cannot produce even one of the hair-pores of a Buddha.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858694bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856663bi' class='verse'>
+							&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857679bi' class='verse'>
+							諸佛與輪王 相中一分等<br />譬如螢與日 於光微有似&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857171bi' class='verse'>
+							ñi ma rnams kyi ’od byed pa | | me khyer rnams daṅ bag ’dra ltar | |<br />saṅs rgyas rnams kyi mtshan yaṅ ni | | ’khor los sgyur ba rnams daṅ ’dra | |&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858187bi' class='verse'>
+							Just as the blilliance of suns is slightly like that of fireflies, <br />So the signs of a Buddha are slightly like those of a Universal Emperor.&nbsp;</span></div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858695bi' class='verse'>
+							 commentary&nbsp;</span></div></div><div class='clear'></div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'><div class='Sanskrit'><span id='7856664bi' class='chaptertitle'>
+							&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7856644";
+							kilderef = "Rā Hahn (1982) 62,4  - Hahn (1982) ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='Chinese'><span id='7857680bi' class='chaptertitle'>
+							寶行王正論雜品第二&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7857660";
+							kilderef = "Rā Chi: 真諦, T.1656  497b14 - Chi: 真諦, T.1656 495b29";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7857172bi' class='chaptertitle'>
+							rin po che’i phreṅ ba las spel ma źes bya ba ste le’u gñis pa’o ||&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7857152";
+							kilderef = "Rā Hahn (1982)  68,1 - Hahn (1982) 71,22";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='English'><span id='7858188bi' class='chaptertitle'>
+							Chapter Two: An Interwoven Explanation of Definite Goodness and High Status.&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7858168";
+							kilderef = "Rā Eng: Hopkings and Lati (1975)  44,1 - Eng: Hopkings and Lati (1975) 32,3";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='textvar' style='width:19%;'><div class='Tibetan'><span id='7858696bi' class='chaptertitle'>
+							 commentary&nbsp;</span>							<script language="javascript" type="text/javascript">
+
+							tekstid = "7858676";
+							kilderef = "Rā Tib ṭ: Ajitamitra (9th-10th Century A.D.), Tg ge  - Tib ṭ: Ajitamitra (9th-10th Century A.D.), Tg ge ";
+							$('#'+tekstid).text(kilderef);
+							</script>
+					</div></div><div class='clear'></div><div class='BolkContainer'><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div><div class='textvar' style='width:19%;'></div></div><div class='clear'></div><div class="fontboks"><a onClick=onOffdiv('permlink') name="permlink" href="#permlink">Permanent link</a></div><div class='clear'></div><div class='perm_felt' id='permlink'>http://www2.hf.uio.no/common/apps/permlink/permlink.php?app=polyglotta&amp;context=ctext&amp;uid=c73676c6-6be6-11df-870c-00215aecadea</div></div></div><!-- infofelt --></div><!-- divControl --><div class="clear"></div>
+<div style="clear:both"></div><div class="signatur"><div class="signatur_left">
+		<a href="https://wiki.uio.no/hf/dmlf/index.php/Kategori:Polyglotta:Documentation">Go to Wiki Documentation</a></br>Enhet: <a HREF=http://www.hf.uio.no>Det humanistiske fakultet</a> &nbsp; Utviklet av: <a href="http://www.hf.uio.no/tjenester/it">IT-seksjonen ved HF</a></div><!--signatur_left -->
+		<div class="signatur_right"><a href="/polyglotta/admin/index.php">Login</a></div>
+		<div style="clear:both"></div></div>
+</body></html><SCRIPT LANGUAGE="JAVASCRIPT">
+	
+	$("#tr_IA").click(function(){
+	    if ($("#toggle_container_IA").is(':hidden'))
+	    	$("#toggle_container_IA").show();
+	    else{
+	        $("#toggle_container_IA").hide();
+	    }
+	    return false;
+		});
+
+	$("#tr_lang").click(function(){
+	    if ($("#toggle_container_lan").is(':hidden'))
+	    	$("#toggle_container_lan").show();
+	    else{
+	        $("#toggle_container_lan").hide();
+	    }
+	    return false;
+	});
+
+	$("#tr_img").click(function(){
+	    if ($("#toggle_container_img").is(':hidden'))
+	    	$("#toggle_container_img").show();
+	    else{
+	        $("#toggle_container_img").hide();
+	    }
+	    return false;
+	});
+
+	$("#diac2button").click(function(){
+	   if ($("#ex3a").is(':hidden')){
+		   $("#ex3a").show();
+	       $("#diac2button").html("Hide&#32Diacritica-help");
+	   }else{
+	       $("#ex3a").hide();
+	       $("#diac2button").html("Diacritica-help");
+	   }
+	   return false;
+	});
+
+	$("#diacbutton").click(function(){
+	   if ($("#diacritical_sign").is(':hidden')){
+		   	$("#diacritical_sign").show();
+	      	$("#diacbutton").html("Hide&#32diacritica");
+	   }else{
+	        $("#diacritical_sign").hide();
+	        $("#diacbutton").html("Diacritica");
+	   }
+	   return false;
+    });
+
+	$('#toggle_container_IA').click(function(e) {
+	   e.stopPropagation();
+	});
+
+	$('#toggle_container_lan').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#toggle_container_img').click(function(e) {
+        e.stopPropagation();
+    });
+
+	$('#ex3a').click(function(e) {
+	    e.stopPropagation();
+	});
+
+	$('#diacritical_sign').click(function(e) {
+        e.stopPropagation();
+    });
+
+	//Kode for å sette inn diakritiske tegn
+	$('#diacritical > tbody > tr > td').click(function() {
+	  	//alert('red');
+		$("#sokeboks").val($("#sokeboks").val() + $(this).text());
+	});
+
+	$('.diac2button').text(($('.diacbutton').text() == 'Diacritica-help') ? 'Hide Diacritica-help' : 'Diacritica-help');
+	
+	//Lukker alle åpnede pop'uper ved klikk på siden
+	$(document).click(function() {
+		$('#toggle_container_IA').hide();
+	    
+        $('#toggle_container_lan').hide();
+    
+        $('#toggle_container_img').hide();
+   
+   		$('#diacritical_sign').hide();
+   		$("#diacbutton").html("Diacritica");
+   
+       	$('#ex3a').hide();
+       	$("#diac2button").html("Diacritica-help");
+   });
+	</SCRIPT>

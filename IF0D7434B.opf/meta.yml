@@ -1,0 +1,136 @@
+id: IF0D7434B
+source: https://www2.hf.uio.no/polyglotta/index.php?page=library&bid=2
+source_file: null
+initial_creation_type: input
+imported: '2022-05-27T19:37:45.667776'
+last_modified: '2022-05-27T19:37:45.667790'
+parser: null
+source_metadata:
+  title: 'Nāgārjuna: Ratnāvalī'
+  language: zh
+  base:
+    fF477:
+      title: Title
+      base_file: fF477.txt
+      order: 1
+    f929F:
+      title: Preface
+      base_file: f929F.txt
+      order: 2
+    f3B21:
+      title: CI_Verses 1-20
+      base_file: f3B21.txt
+      order: 3
+    f72F1:
+      title: CI_Verses 21-40
+      base_file: f72F1.txt
+      order: 4
+    fAC48:
+      title: CI_Verses 41-60
+      base_file: fAC48.txt
+      order: 5
+    f833B:
+      title: CI_Verses 61-80
+      base_file: f833B.txt
+      order: 6
+    fA080:
+      title: CI_Verses 81-100
+      base_file: fA080.txt
+      order: 7
+    f8688:
+      title: CII_Verses 1-20
+      base_file: f8688.txt
+      order: 8
+    f37AF:
+      title: CII_Verses 21-40
+      base_file: f37AF.txt
+      order: 9
+    fB05A:
+      title: CII_Verses 41-60
+      base_file: fB05A.txt
+      order: 10
+    f32AE:
+      title: CII_Verses 61-80
+      base_file: f32AE.txt
+      order: 11
+    f6AD4:
+      title: CII_Verses 81-100
+      base_file: f6AD4.txt
+      order: 12
+    f7A87:
+      title: CIII_Verses 1-20
+      base_file: f7A87.txt
+      order: 13
+    fD74A:
+      title: CIII_Verses 21-40
+      base_file: fD74A.txt
+      order: 14
+    fF804:
+      title: CIII_Verses 41-60
+      base_file: fF804.txt
+      order: 15
+    fC52E:
+      title: CIII_Verses 61-80
+      base_file: fC52E.txt
+      order: 16
+    f1A53:
+      title: CIII_Verses 81-100
+      base_file: f1A53.txt
+      order: 17
+    fE080:
+      title: CIV_Verses 1-20
+      base_file: fE080.txt
+      order: 18
+    f8810:
+      title: CIV_Verses 21-40
+      base_file: f8810.txt
+      order: 19
+    f7E9E:
+      title: CIV_Verses 41-60
+      base_file: f7E9E.txt
+      order: 20
+    fEE48:
+      title: CIV_Verses 61-80
+      base_file: fEE48.txt
+      order: 21
+    f4F3D:
+      title: CIV_Verses 81-100
+      base_file: f4F3D.txt
+      order: 22
+    f40CC:
+      title: CV_Verses 1-20
+      base_file: f40CC.txt
+      order: 23
+    f0A5A:
+      title: CV_Verses 21-40
+      base_file: f0A5A.txt
+      order: 24
+    f6ED4:
+      title: CV_Verses 41-60
+      base_file: f6ED4.txt
+      order: 25
+    f3BB3:
+      title: CV_Verses 61-80
+      base_file: f3BB3.txt
+      order: 26
+    f4460:
+      title: CV_Verses 81-100
+      base_file: f4460.txt
+      order: 27
+    f7B65:
+      title: Colophon
+      base_file: f7B65.txt
+      order: 28
+  chapter_to_tile:
+    CI: Chapter 1
+    CII: Chapter 2
+    CIII: Chapter 3
+    CIV: Chapter 4
+    CV: Chapter 5
+statistics: {}
+quality: {}
+copyright:
+  status: Unknown
+  notice: ''
+  info_url: null
+license: null
